@@ -1,0 +1,29 @@
+{
+   "name": "plain-table",
+   "version": "0.1.0",
+   "description": "A DOM/HTML table controller with virtual rendering",
+   "license": "MIT",
+   "repository": "github:chdh/plain-table",
+   "type": "module",
+   "contributors": [
+      {
+         "name": "Christian d'Heureuse",
+         "email": "chdh@inventec.ch",
+         "url": "http://www.source-code.biz"
+      }
+   ],
+   "scripts": {
+      "clean": "node build.js clean",
+      "build": "node build.js build",
+      "prepack": "node build.js verifyCurrentDirIsDist",
+      "doPack": "cd dist && npm pack",
+      "doPublish": "cd dist && npm publish"
+   },
+   "devDependencies": {
+      "rimraf": "^2.6.3"
+   },
+   "dependencies": {
+      "plain-scrollbar": "^1.0.6",
+      "virtual-grid-layout": "^0.1.2"
+   }
+}

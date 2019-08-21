@@ -1,0 +1,117 @@
+html {
+   font-size: 14px; }
+
+body, button, input, select, textarea {
+   font-family: Lato, sans-serif;
+   font-size: inherit;
+   line-height: 1.4375; }
+
+body {
+   margin: 20px; }
+
+h1 {
+   font-size: 18px; }
+
+input[type="text"], input[type="number"] {
+   padding: 1px 2px; }
+
+input[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none; }
+input[type="number"] {
+   -moz-appearance: textfield; }
+input[type="text"]:invalid:not(:focus), input[type="number"]:invalid:not(:focus) {
+   box-shadow: 0 0 1px 1px #f00; }
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+   outline: 1px auto #4D90FE; }
+
+#table:focus {
+   outline: none; }
+
+label[title] {
+   text-decoration: underline dotted #aaa;
+   text-underline-position: under; }
+
+.parmBlock {
+   margin-bottom: 12px; }
+
+.parmBlock * {
+   box-sizing: border-box; }
+
+.parmLine {
+   display: flex;
+   align-items: baseline;
+   margin-top: 8px; }
+
+div.parmLine input[type="checkbox"] {
+   margin-left: 0;
+   vertical-align: bottom; }
+
+.width1 {
+   width: 115px; }
+.width2 {
+   width: 80px; }
+.gap1 {
+   margin-left: 20px; }
+.to {
+   width: 20px;
+   text-align: center; }
+
+#table {
+   width: 1200px;
+   height: 800px;
+   border: 1px solid #888; }
+
+.cellContent {
+   padding: 2px 3px; }
+
+.cellContentButton {
+   font-size: 13px;
+   box-sizing: border-box;
+   padding: 2px 0;
+   height: 100%;
+   text-align: center;
+   background-color: #D4D0C8;
+   border-top: 1px solid #FFFFFF;
+   border-left: 1px solid #FFFFFF;
+   border-right: 1px solid #000000;
+   border-bottom: 1px solid #000000; }
+
+.cellContentOpenButton {
+   box-sizing: border-box;
+   height: 100%;
+   border-right: 1px solid #AAAAAA;
+   border-bottom: 1px solid #AAAAAA;
+   background-repeat: no-repeat;
+   background-size: 9px;
+   background-position: 3px 3px;
+   background-image: url("data:image/svg+xml;utf8, \
+     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 9'> \
+       <path d='M 0.5 0.5 H 8.5 V 8.5 H 0.5 z' stroke='%23D4D0C8' stroke-width='1px' fill='none'/> \
+       <path d='M 2 4.5 H 6.5' stroke='%23000' stroke-width='1px' fill='none'/> \
+       <path d='M 4.5 2 V 6.5' stroke='%23000' stroke-width='1px' fill='none'/> \
+     </svg>"); }
+
+.cellContentCloseButton {
+   box-sizing: border-box;
+   height: 100%;
+   border-right: 1px solid #AAAAAA;
+   border-bottom: 1px solid #AAAAAA;
+   background-repeat: no-repeat;
+   background-size: 9px;
+   background-position: 3px 3px;
+   background-image: url("data:image/svg+xml;utf8, \
+     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 9'> \
+       <path d='M 0.5 0.5 H 8.5 V 8.5 H 0.5 z' stroke='%23D4D0C8' stroke-width='1px' fill='none'/> \
+       <path d='M 2 4.5 H 6.5' stroke='%23000' stroke-width='1px' fill='none'/> \
+     </svg>"); }
+
+.footer {
+   margin-top: 15px; }
+
+/* Test only */
+/*
+body {
+   --plain-table-gridLineWidth: 3px;
+   --plain-table-hGridLineColor: red; }
+*/

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+ <link rel="stylesheet" href="app.css">
+ <script src="app.js"></script>
+ <title>Plain Table Demo</title>
+</head>
+<body>
+
+<script>
+ if (!("customElements" in window) || !("attachShadow" in HTMLElement.prototype)) {
+    document.write('<p style="color: red; font-size: 20px; font-weight: bold;">Sorry, your web browser is outdated and cannot run this application!</p>'); }
+</script>
+
+<h1>Plain Table Demo</h1>
+
+<div class="parmBlock" id="appParms">
+ <div class="parmLine">
+  <label class="width1" for="rowCount">Row count:</label>
+  <input class="width2" id="rowCount" type="number" min="0" required value="100">
+  <label class="width1 gap1" for="rowHeightLo">Row height:</label>
+  <input class="width2" id="rowHeightLo" type="number" min="0" required value="25">
+  <label class="to">-</label>
+  <input class="width2" id="rowHeightHi" type="number" min="0" required value="125">
+  <label class="width1 gap1" for="colCount">Column count:</label>
+  <input class="width2" id="colCount" type="number" min="0" required value="100">
+  <label class="width1 gap1" for="colWidthLo">Column width:</label>
+  <input class="width2" id="colWidthLo" type="number" min="0" required value="40">
+  <label class="to">-</label>
+  <input class="width2" id="colWidthHi" type="number" min="0" required value="240">
+ </div>
+ <div class="parmLine">
+  <label class="width1" for="macroCellRate" title="(ignored when style variant is sub-tables)">Macro cell rate:</label>
+  <input class="width2" id="macroCellRate" type="number" min="0" max="1" step="any" required value="0.25">
+  <label class="width1 gap1" for="macroCellHeightLo">Macro cell height:</label>
+  <input class="width2" id="macroCellHeightLo" type="number" min="0" required value="50">
+  <label class="to">-</label>
+  <input class="width2" id="macroCellHeightHi" type="number" min="0" required value="125">
+  <label class="width1 gap1" for="macroCellWidth">Macro cell width:</label>
+  <input class="width2" id="macroCellWidth" type="number" min="0" required value="800">
+ </div>
+ <div class="parmLine">
+  <label class="width1" for="colHeaderHeight" title="Column header height in pixels. 0 = no column headers.">Col. hdr height:</label>
+  <input class="width2" id="colHeaderHeight" type="number" min="0" required value="25">
+  <label class="width1 gap1" for="rowHeaderWidth" title="Row header width in pixels. 0 = no row headers.">Row hdr width:</label>
+  <input class="width2" id="rowHeaderWidth" type="number" min="0" required value="40">
+  <label class="width1 gap1" for="vScrollbarVisible">Vertical scrollbar:</label>
+  <div class="width2"><input id="vScrollbarVisible" type="checkbox" checked></div>
+  <label class="width1 gap1" for="hScrollbarVisible">Horiz. scrollbar:</label>
+  <div class="width2"><input id="hScrollbarVisible" type="checkbox" checked></div>
+ </div>
+ <div class="parmLine">
+  <label class="width1" for="styleVariant">Style variant:</label>
+  <select class="width2" id="styleVariant">
+   <option value="1">plain</option>
+   <option value="2">button headers</option>
+   <option value="3" selected>sub-tables</option>
+  </select>
+  <label class="width1 gap1" for="rowSizingEnableHeader" title="Enable row sizing in the row header">Row hdr resize:</label>
+  <div class="width2"><input id="rowSizingEnableHeader" type="checkbox" checked></div>
+  <label class="width1 gap1" for="colSizingEnableHeader" title="Enable column sizing in the column header">Col. hdr resize:</label>
+  <div class="width2"><input id="colSizingEnableHeader" type="checkbox" checked></div>
+  <label class="width1 gap1" for="rowSizingEnableContent" title="Enable row sizing in the main content grid">Cont. row resize:</label>
+  <div class="width2"><input id="rowSizingEnableContent" type="checkbox"></div>
+  <label class="width1 gap1" for="colSizingEnableContent" title="Enable column sizing in the main content grid">Cont. col. resize:</label>
+  <div class="width2"><input id="colSizingEnableContent" type="checkbox"></div>
+ </div>
+</div>
+
+<div id="table" tabindex="0">
+</div>
+
+<div class="footer">
+ Source code: &nbsp;<a href="https://github.com/chdh/plain-table">Github</a>
+</div>
+
+</body>
+</html>
